@@ -13,3 +13,30 @@ body {
 h1 {
   text-align: center;
 }
+
+footer {
+  position: relative;
+  top: 300px
+}
+
+footer a {
+  color: #000;
+}
+
+footer a:hover {
+  color: #000;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
