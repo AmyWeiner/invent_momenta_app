@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get '/about', to: "static_pages#about", as: 'about'
 
   # Routes for User Resource
-  resources :users
+  resources :users 
   get '/signup', to: 'users#new', as: 'signup'
+
+  # Routes for Profile Controller
+  get '/users/:id/profile/new', to: 'profiles#new', as: 'user_profile_new'
+  post '/users/:id/profile', to: 'profiles#create', as: 'user_profile'
 end
