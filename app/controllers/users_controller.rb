@@ -9,8 +9,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      sign_in @user
       flash[:success] = "Your registration was successful!"
-      redirect_to :controller => 'profiles', :action => 'new', :id => @user.id
+      redirect_to current_user
+      #redirect_to :controller => 'profiles', :action => 'new', :id => @user.id
     else
       render 'new'
     end
