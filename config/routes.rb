@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   resources :users 
   get '/signup', to: 'users#new', as: 'signup'
 
+  # Routes for Sessions Resource
+  resources :sessions, only: [:new, :create, :destroy]
+  get '/signin', to: 'sessions#new', as: 'signin'
+  delete '/signout', to: 'sessions#destroy', as: 'signout'
+
   # Routes for Profile Controller
   get '/users/:id/profile/new', to: 'profiles#new', as: 'user_profile_new'
   post '/users/:id/profile', to: 'profiles#create', as: 'user_profile'

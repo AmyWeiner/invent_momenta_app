@@ -27,6 +27,6 @@
   box-sizing: border-box;
 }
 
-.signup {
+.signup, .signin {
   color: #04cc04;
 }
