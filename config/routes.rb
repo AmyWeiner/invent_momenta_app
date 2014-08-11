@@ -17,6 +17,6 @@ Rails.application.routes.draw do
   delete '/signout', to: 'sessions#destroy', as: 'signout'
 
   # Routes for Profile Controller
-  #get '/users/:id/profile/new', to: 'profiles#new', as: 'user_profile_new'
+  get '/users/:id/profile/new', to: 'profiles#new', as: 'user_profile_new'
   #post '/users/:id/profile', to: 'profiles#create', as: 'user_profile'
 end
